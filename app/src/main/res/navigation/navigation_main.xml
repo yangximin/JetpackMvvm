@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/fg_main">
+
+    <fragment
+        android:id="@+id/fg_main"
+        android:name="com.yang.jetpack.ui.home.HomeFragment"
+        android:label="首页"
+        tools:layout="@layout/fragment_list_layout" />
+    <fragment
+        android:id="@+id/fg_friend"
+        android:name="com.yang.jetpack.ui.friend.FriendFragment"
+        android:label="朋友"
+        tools:layout="@layout/fg_friend" />
+    <fragment
+        android:id="@+id/fg_system"
+        android:name="com.yang.jetpack.ui.fragment.SystemFragment"
+        android:label="系统"
+        tools:layout="@layout/fg_system" />
+    <fragment
+        android:id="@+id/fg_project"
+        android:name="com.yang.jetpack.ui.fragment.ProjectFragment"
+        android:label="项目"
+        tools:layout="@layout/fg_project" />
+</navigation>

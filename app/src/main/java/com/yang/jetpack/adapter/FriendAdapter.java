@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.yang.jetpack.BR;
 import com.yang.jetpack.R;
 import com.yang.jetpack.adapter.holder.CommonViewHolder;
 
@@ -25,7 +26,7 @@ public class FriendAdapter extends RecyclerView.Adapter<CommonViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull CommonViewHolder holder, int position) {
-
+        holder.bindingUtil.setVariable(BR.countText, position + "");
     }
 
     @Override

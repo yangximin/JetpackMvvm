@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
  */
 public class CommonViewHolder extends RecyclerView.ViewHolder {
 
-    ViewDataBinding bindingUtil;
+    public ViewDataBinding bindingUtil;
 
     public CommonViewHolder(ViewDataBinding bindingUtil) {
         super(bindingUtil.getRoot());

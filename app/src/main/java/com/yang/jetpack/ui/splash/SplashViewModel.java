@@ -68,7 +68,7 @@ public class SplashViewModel extends BaseViewModel<SplashModel> {
             public void onNext(String s) {
                 mTimer.postValue("跳过：" + s);
                 L.i("跳过：" + s);
-                if (TextUtils.equals("98s", s)) {
+                if (TextUtils.equals("99s", s)) {
                     mActivitySkip.postValue(new ActivitySkip("mainActivity"));
                 }
             }

@@ -54,6 +54,10 @@ public class AdapterBindingUtils {
 
             imageView.setImageResource(R.mipmap.ic_collect_no);
     }
+    @BindingAdapter("countText")
+    public static void setTextCount(TextView tv, String count) {
+        tv.setText(count);
+    }
 
     @BindingAdapter("articleTag")
     public static void setArticleTag(TextView view, ArticleBean articleBean) {

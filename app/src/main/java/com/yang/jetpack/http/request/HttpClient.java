@@ -1,6 +1,7 @@
 package com.yang.jetpack.http.request;
 
 import com.yang.jetpack.http.httptool.RequestResultFunc;
+import com.yang.jetpack.http.httptool.ResponseConverterFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -41,7 +42,7 @@ public class HttpClient {
 
     public HttpClient() {
         mRetrofit = new Retrofit.Builder()
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(ResponseConverterFactory.create())
                 .baseUrl(HTTP_HOST_URL)
                 .client(HTTP_CLIENT)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build();

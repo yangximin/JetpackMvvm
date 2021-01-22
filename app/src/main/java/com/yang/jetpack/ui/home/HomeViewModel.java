@@ -32,13 +32,10 @@ public class HomeViewModel extends BaseViewModel<HomeModel> {
     @Override
     protected void init() {
         mHomeDateList = new MutableLiveData<>();
+        loadState.postValue(LoadState.LOADING);
         loadHomeData();
     }
 
-    @Override
-    public void onCreate(@NonNull LifecycleOwner owner) {
-        loadState.postValue(LoadState.LOADING);
-    }
 
     public void loadHomeData() {
         mIndex = 0;
@@ -51,6 +48,12 @@ public class HomeViewModel extends BaseViewModel<HomeModel> {
 //                }
 //                mHomeDateList.setValue(homeDates);
                 mHomeDateList.postValue(homeDates);
+                loadState.postValue(LoadState.SUCCESS);
+            }
+
+            @Override
+            public void onError(@io.reactivex.annotations.NonNull Throwable e) {
+                super.onError(e);
             }
         });
     }

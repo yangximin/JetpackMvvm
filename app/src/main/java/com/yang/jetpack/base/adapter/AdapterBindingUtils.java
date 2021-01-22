@@ -22,7 +22,7 @@ import java.util.List;
  */
 public class AdapterBindingUtils {
     @BindingAdapter("bannerData")
-    public void setBannerData(MZBannerView banner, BannerData bannerData) {
+    public static void setBannerData(MZBannerView banner, BannerData bannerData) {
         if (bannerData == null || bannerData.getHomeBanners() == null) {
             return;
         }

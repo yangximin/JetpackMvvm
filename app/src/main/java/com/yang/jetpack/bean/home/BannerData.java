@@ -11,6 +11,10 @@ public class BannerData {
 
     List<HomeBanner> homeBanners;
 
+    public BannerData(List<HomeBanner> homeBanners) {
+        this.homeBanners = homeBanners;
+    }
+
     public List<HomeBanner> getHomeBanners() {
         return homeBanners;
     }

@@ -65,9 +65,10 @@ public abstract class BaseFragment<DB extends ViewDataBinding, VM extends BaseVi
             case NO_NETWORK:
                 break;
             case SUCCESS:
+//                mFragmentBaseBinding.fgBaseContent.addView(mDataBinding.getRoot());
                 break;
             case LOADING:
-                ViewDataBinding inflate = DataBindingUtil.inflate(getLayoutInflater(), R.layout.layout_loading_view, mFragmentBaseBinding.fgBaseContent, true);
+                DataBindingUtil.inflate(getLayoutInflater(), R.layout.layout_loading_view, mFragmentBaseBinding.fgBaseContent, true);
                 break;
             case NO_DATA:
                 break;
@@ -77,7 +78,7 @@ public abstract class BaseFragment<DB extends ViewDataBinding, VM extends BaseVi
     private void removeLoadView() {
         int childCount = mFragmentBaseBinding.fgBaseContent.getChildCount();
         if (childCount > 1) {
-            mFragmentBaseBinding.fgBaseContent.removeAllViews();
+            mFragmentBaseBinding.fgBaseContent.removeViews(0, childCount - 1);
         }
     }
 
